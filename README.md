@@ -5,7 +5,7 @@
 ## 特性
 
 - 🎯 **零配置** - 开箱即用，无需额外配置
-- 🎨 **Tailwind CSS 内置** - 样式已包含，无需用户安装 Tailwind
+- 🎨 **样式自动注入** - 样式会自动注入到页面中，无需手动导入CSS
 - 📱 **响应式设计** - 支持移动端和桌面端
 - 🌐 **多平台支持** - 支持 20+ 个社交平台
 - ⚡ **原生分享 API** - 移动端自动使用原生分享
@@ -20,7 +20,7 @@ npm install react-share-float
 ## 使用
 
 ```jsx
-import { ReactShareFloat } from 'react-share-float'
+import ReactShareFloat from 'react-share-float'
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
       <h1>我的应用</h1>
       <p>滚动页面查看浮动分享按钮</p>
       
-      {/* 组件会自动包含所需的 Tailwind CSS 样式 */}
+      {/* 组件会自动注入所需的样式，无需手动导入CSS */}
       <ReactShareFloat />
     </div>
   )
@@ -39,9 +39,9 @@ function App() {
 
 ### 主项目 (react-share-float)
 - ✅ 包含 Tailwind CSS v4 配置
-- ✅ 包含所有必要的样式
+- ✅ 样式自动注入，无需用户手动导入
 - ✅ 使用 `cn` 函数处理样式合并
-- ✅ 构建时生成独立的 CSS 文件
+- ✅ 构建时生成独立的 JS 文件
 
 ### 示例项目 (examples/basic)
 - ✅ 不包含 Tailwind CSS 依赖

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ReactShareFloat } from 'react-share-float'
+import ReactShareFloat from 'react-share-float'
 import { cn } from './lib/utils.js'
 
 export function App() {

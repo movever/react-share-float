@@ -1,7 +1,7 @@
 {
   "name": "react-share-float",
   "version": "0.1.0",
-  "description": "Floating share component based on react-share.",
+  "description": "Floating share component based on react-share with auto-injected styles.",
   "type": "module",
   "main": "dist/react-share-float.cjs",
   "module": "dist/react-share-float.es.js",

@@ -47,6 +47,12 @@ import {ChevronsRight, MoreHorizontal, X} from './icons.jsx';
 import {cn} from "./lib/utils.js";
 
 export default function ReactShareFloat() {
+    // 确保样式被加载
+    useEffect(() => {
+        // 这里可以添加样式加载的逻辑
+        // 由于我们导入了 styles.css，Vite 会自动处理样式注入
+    }, []);
+
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [canNativeShare, setCanNativeShare] = useState(false);
