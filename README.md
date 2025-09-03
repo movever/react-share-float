@@ -1,44 +1,74 @@
-## react-share-float
+# React Share Float
 
-基于 `react-share` 的前端浮动分享组件。
+一个基于 react-share 的浮动分享组件，支持多种社交平台分享。
 
-- 包名：`react-share-float`
-- 入口：`src`
-- 开发文档与调试说明见 `dev.md`
+## 特性
 
-### 安装
+- 🎯 **零配置** - 开箱即用，无需额外配置
+- 🎨 **Tailwind CSS 内置** - 样式已包含，无需用户安装 Tailwind
+- 📱 **响应式设计** - 支持移动端和桌面端
+- 🌐 **多平台支持** - 支持 20+ 个社交平台
+- ⚡ **原生分享 API** - 移动端自动使用原生分享
+- 🎭 **主题切换** - 支持明暗主题切换
+
+## 安装
 
 ```bash
 npm install react-share-float
-# 或者
-yarn add react-share-float
 ```
 
-### 使用示例
+## 使用
 
 ```jsx
-import React from 'react'
 import { ReactShareFloat } from 'react-share-float'
 
-export default function Page() {
+function App() {
   return (
-    <div style={{ height: 1200 }}>
-      <h1>Demo</h1>
+    <div>
+      <h1>我的应用</h1>
+      <p>滚动页面查看浮动分享按钮</p>
+      
+      {/* 组件会自动包含所需的 Tailwind CSS 样式 */}
       <ReactShareFloat />
     </div>
   )
 }
 ```
 
-### API
+## 架构设计
 
-ReactShareFloat(props)
+### 主项目 (react-share-float)
+- ✅ 包含 Tailwind CSS v4 配置
+- ✅ 包含所有必要的样式
+- ✅ 使用 `cn` 函数处理样式合并
+- ✅ 构建时生成独立的 CSS 文件
 
-- `children?: React.ReactNode` 可选，自定义触发按钮或内容。不传时默认渲染一个 Button。
+### 示例项目 (examples/basic)
+- ✅ 不包含 Tailwind CSS 依赖
+- ✅ 通过别名导入主项目源码
+- ✅ 自动使用主项目的样式
 
-组件会固定在页面右下角（`position: fixed; right: 16; bottom: 16;`）。
+## 开发
 
-更多开发与本地调试、发布流程请查看 `dev.md`。
+```bash
+# 安装依赖
+npm install
 
-# react-share-float
-A floating share component built on top of react-share . Plug-and-play: just import it to add floating social share buttons (Twitter, Facebook, Reddit, and more) to your website.
+# 启动示例项目
+npm run dev
+
+# 构建主项目
+npm run build
+```
+
+## 技术栈
+
+- React 18+
+- Tailwind CSS v4
+- Vite
+- react-share
+- clsx + tailwind-merge
+
+## 许可证
+
+MIT
