@@ -1,16 +1,41 @@
 {
-  "name": "react-share-float-monorepo",
-  "private": true,
-  "version": "0.0.0",
-  "workspaces": [
-    "packages/*",
-    "examples/*"
+  "name": "react-share-float",
+  "version": "0.1.0",
+  "description": "Floating share component based on react-share.",
+  "type": "module",
+  "main": "dist/react-share-float.cjs",
+  "module": "dist/react-share-float.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/react-share-float.es.js",
+      "require": "./dist/react-share-float.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
   ],
+  "sideEffects": false,
   "scripts": {
-    "build": "npm -w react-share-float run build",
-    "dev": "npm -w basic-example run dev",
-    "preview": "npm -w basic-example run preview",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "dev": "npm --prefix examples/basic run dev",
+    "preview": "npm --prefix examples/basic run preview",
     "clean": "git clean -fdX"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "dependencies": {
+    "react-share": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "@vitejs/plugin-react": "^4.3.1"
   }
 }
 

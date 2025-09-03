@@ -1,8 +1,8 @@
 # 开发与调试说明
 
-本仓库为 Monorepo 结构：
+本仓库为单包结构（非 Monorepo）：
 
-- `packages/react-share-float`：组件库源码与构建配置（Vite Library）
+- `src`：组件库源码与构建配置（Vite Library）
 - `examples/basic`：本地调试示例（Vite React 应用），通过别名直接引用库源码
 
 ## 环境准备
@@ -25,21 +25,19 @@ npm run dev
 
 ```bash
 npm run build
-# 等价于：npm -w react-share-float run build
 ```
 
-产物输出到 `packages/react-share-float/dist`，包含 ESM、CJS 与类型声明。
+产物输出到 `dist`，包含 ESM、CJS 与类型声明。
 
 ## 发布到 npm
 
 1. 确保已登录：`npm login`
 2. 构建：
    ```bash
-   npm -w react-share-float run build
+   npm run build
    ```
 3. 发布：
    ```bash
-   cd packages/react-share-float
    npm publish --access public
    ```
 
@@ -47,15 +45,13 @@ npm run build
 
 ```
 react-share-float/
-├─ packages/
-│  └─ react-share-float/
-│     ├─ src/
-│     │  ├─ react-share-float.tsx   # 核心组件（单文件）
-│     │  └─ index.ts                # 导出入口
-│     ├─ vite.config.ts             # Vite 库构建配置
-│     ├─ tsconfig.json
-│     ├─ tsconfig.build.json
-│     └─ package.json
+├─ src/
+│  ├─ react-share-float.tsx          # 核心组件（单文件）
+│  └─ index.ts                       # 导出入口
+├─ vite.config.ts                    # Vite 库构建配置
+├─ tsconfig.json
+├─ tsconfig.build.json
+├─ package.json
 ├─ examples/
 │  └─ basic/
 │     ├─ src/

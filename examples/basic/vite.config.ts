@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      'react-share-float': path.resolve(__dirname, '../../packages/react-share-float/src')
+      'react-share-float': path.resolve(__dirname, '../../src')
     }
   },
   server: {

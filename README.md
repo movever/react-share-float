@@ -3,7 +3,7 @@
 基于 `react-share` 的前端浮动分享组件。
 
 - 包名：`react-share-float`
-- 入口：`packages/react-share-float`
+- 入口：`src`
 - 开发文档与调试说明见 `dev.md`
 
 ### 安装

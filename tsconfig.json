@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "outDir": "dist",
@@ -9,7 +9,7 @@
     "skipLibCheck": true,
     "moduleResolution": "bundler"
   },
-  "include": ["src"]
+  "include": ["src", "vite.config.ts"]
 }
 
 
