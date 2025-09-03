@@ -22,6 +22,7 @@
     "publish:all": "node scripts/publish.js",
     "publish:utils": "cd packages/utils && npm publish",
     "publish:main": "cd packages/react-share-float && npm publish",
+    "publish:quick": "node scripts/quick-publish.js",
     "test:build": "node scripts/test-build.js",
     "lint": "echo 'Linting not configured yet'",
     "test": "echo 'Testing not configured yet'"
