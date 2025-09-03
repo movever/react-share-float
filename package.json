@@ -1,0 +1,46 @@
+{
+  "name": "react-share-float-monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo for React Share Float component library",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:demo",
+    "dev:demo": "cd apps/demo && npm run dev",
+    "build": "npm run build:utils && npm run build:react-share-float",
+    "build:utils": "cd packages/utils && npm run build",
+    "build:react-share-float": "cd packages/react-share-float && npm run build",
+    "clean": "npm run clean:utils && npm run clean:react-share-float",
+    "clean:utils": "cd packages/utils && npm run clean",
+    "clean:react-share-float": "cd packages/react-share-float && npm run clean",
+    "install:all": "npm install && npm run install:packages && npm run install:apps",
+    "install:packages": "cd packages/utils && npm install && cd ../react-share-float && npm install",
+    "install:apps": "cd apps/demo && npm install",
+    "publish:all": "node scripts/publish.js",
+    "publish:utils": "cd packages/utils && npm publish",
+    "publish:main": "cd packages/react-share-float && npm publish",
+    "test:build": "node scripts/test-build.js",
+    "lint": "echo 'Linting not configured yet'",
+    "test": "echo 'Testing not configured yet'"
+  },
+  "keywords": [
+    "react",
+    "share",
+    "float",
+    "component",
+    "library"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

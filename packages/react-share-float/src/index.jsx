@@ -43,7 +43,12 @@ import {
     EmailIcon, FacebookMessengerShareButton, FacebookMessengerIcon
 } from 'react-share';
 import {ChevronsRight, MoreHorizontal, X} from 'lucide-react';
-import {cn} from "@utils/index";
+import {clsx} from "clsx";
+import {twMerge} from "tailwind-merge";
+
+function cn(...inputs) {
+    return twMerge(clsx(inputs));
+}
 
 
 export default function FloatingShareButton() {

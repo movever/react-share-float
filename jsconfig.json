@@ -1,9 +1,14 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
         "paths": {
             "@utils/*": [
-                "packages/utils/src/*"
+                "./packages/utils/src/*"
             ]
         }
-    }
+    },
+    "include": [
+        "packages/**/*",
+        "apps/**/*"
+    ]
 }

@@ -1,0 +1,57 @@
+{
+  "name": "react-share-float",
+  "version": "1.0.0",
+  "description": "A floating share button component for React with multiple social media platforms",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "clean": "rm -rf dist",
+    "dev": "vite build --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "share",
+    "float",
+    "social",
+    "media",
+    "component",
+    "twitter",
+    "facebook",
+    "linkedin",
+    "whatsapp",
+    "telegram"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-share-float.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/react-share-float/issues"
+  },
+  "homepage": "https://github.com/yourusername/react-share-float#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "react-share": "^5.2.2",
+    "lucide-react": "^0.294.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8",
+    "@vitejs/plugin-react": "^4.2.1",
+    "tailwindcss": "^3.3.6",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  }
+}
