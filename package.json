@@ -1,0 +1,17 @@
+{
+  "name": "react-share-float-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "npm -w react-share-float run build",
+    "dev": "npm -w basic-example run dev",
+    "preview": "npm -w basic-example run preview",
+    "clean": "git clean -fdX"
+  }
+}
+
+
