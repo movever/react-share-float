@@ -15,9 +15,15 @@ A modern, responsive floating share button component for React that supports mul
 ## Installation
 
 ```bash
+# 安装主包
 npm install react-share-float
-# or
+
+# 安装工具包（可选）
+npm install react-share-float-utils
+
+# 或者使用 yarn
 yarn add react-share-float
+yarn add react-share-float-utils
 ```
 
 ## Quick Start

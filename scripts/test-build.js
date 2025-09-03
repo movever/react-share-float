@@ -51,7 +51,7 @@ function main() {
   const utilsDistPath = './packages/utils/dist';
   const utilsExists = checkFileExists(path.join(utilsDistPath, 'index.js'), 'Utils CJS build');
   const utilsEsExists = checkFileExists(path.join(utilsDistPath, 'index.es'), 'Utils ESM build');
-  checkPackageJson('./packages/utils', '@react-share-float/utils');
+  checkPackageJson('./packages/utils', 'react-share-float-utils');
   
   // 检查react-share-float包
   log('\n📁 Checking react-share-float package...', 'blue');

@@ -1,5 +1,5 @@
 {
-  "name": "@react-share-float/utils",
+  "name": "react-share-float-utils",
   "version": "1.0.0",
   "description": "Utility functions for React Share Float",
   "main": "dist/index.js",

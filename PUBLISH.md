@@ -77,7 +77,7 @@ npm publish
 ```bash
 # 查看包信息
 npm view react-share-float
-npm view @react-share-float/utils
+npm view react-share-float-utils
 
 # 查看版本历史
 npm view react-share-float versions

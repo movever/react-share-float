@@ -78,7 +78,7 @@ function main() {
   build();
   
   // 发布utils包
-  publishPackage('./packages/utils', '@react-share-float/utils');
+  publishPackage('./packages/utils', 'react-share-float-utils');
   
   // 发布主包
   publishPackage('./packages/react-share-float', 'react-share-float');

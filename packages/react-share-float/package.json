@@ -46,7 +46,8 @@
     "react-share": "^5.2.2",
     "lucide-react": "^0.294.0",
     "clsx": "^2.0.0",
-    "tailwind-merge": "^2.0.0"
+    "tailwind-merge": "^2.0.0",
+    "react-share-float-utils": "1.0.0"
   },
   "devDependencies": {
     "vite": "^5.0.8",
