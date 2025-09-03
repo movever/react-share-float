@@ -16,7 +16,7 @@ yarn add react-share-float
 
 ### 使用示例
 
-```tsx
+```jsx
 import React from 'react'
 import { ReactShareFloat } from 'react-share-float'
 
