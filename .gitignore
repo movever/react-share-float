@@ -1,7 +1,2 @@
-node_modules
-dist
-.DS_Store
-.vite
-
-
 .idea/
+node_modules/
