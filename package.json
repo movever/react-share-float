@@ -26,7 +26,9 @@
     "react-dom": ">=17"
   },
   "dependencies": {
-    "react-share": "^5.1.1"
+    "@tailwindcss/vite": "^4.1.12",
+    "react-share": "^5.1.1",
+    "tailwindcss": "^4.1.12"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
