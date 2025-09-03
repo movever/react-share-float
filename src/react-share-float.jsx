@@ -1,5 +1,6 @@
 "use client"
 import {useState, useEffect} from 'react';
+import "./styles.css"
 import {
     FacebookShareButton,
     TwitterShareButton,
@@ -43,12 +44,9 @@ import {
     EmailIcon, FacebookMessengerShareButton, FacebookMessengerIcon
 } from 'react-share';
 import {ChevronsRight, MoreHorizontal, X} from './icons.jsx';
-// local minimal helper to join class names
-function cn(...classes) {
-    return classes.filter(Boolean).join(' ');
-}
+import {cn} from "./lib/utils.js";
 
-export function ReactShareFloat() {
+export default function ReactShareFloat() {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [canNativeShare, setCanNativeShare] = useState(false);
@@ -186,7 +184,10 @@ export function ReactShareFloat() {
                 aria-expanded={isExpanded}
             >
                 <ChevronsRight
-                    className={`transform transition-transform duration-300 ${isExpanded ? 'rotate-180' : 'rotate-0'}`}
+                    className={cn(
+                    "transform transition-transform duration-300",
+                    isExpanded ? "rotate-180" : "rotate-0"
+                )}
                     size={20}/>
             </button>
         </div>
@@ -288,5 +289,3 @@ export function ReactShareFloat() {
         </>
     );
 }
-
-export default ReactShareFloat
