@@ -10,6 +10,7 @@ export default defineConfig({
     lib: {
       entry: 'src/index.jsx',
       name: 'ReactShareFloat',
+      formats: ['es', 'cjs'],
       fileName: (format) => `index.${format === 'es' ? 'es' : 'js'}`
     },
     rollupOptions: {
