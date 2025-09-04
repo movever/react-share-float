@@ -11,7 +11,7 @@ export default defineConfig({
       entry: 'src/index.jsx',
       name: 'ReactShareFloat',
       formats: ['es', 'cjs'],
-      fileName: (format) => `index.${format === 'es' ? 'es' : 'js'}`
+      fileName: (format) => `index.${format === 'es' ? 'es.js' : 'js'}`
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react-share', 'lucide-react'],

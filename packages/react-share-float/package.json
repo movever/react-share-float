@@ -1,10 +1,10 @@
 {
   "name": "react-share-float-button",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A floating share button component for React with multiple social media platforms",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.es",
+  "module": "dist/index.es.js",
   "files": [
     "dist"
   ],
