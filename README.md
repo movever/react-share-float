@@ -156,7 +156,7 @@ The component uses Tailwind CSS classes and can be customized by:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/react-share-float.git
+git clone https://github.com/movever/react-share-float.git
 cd react-share-float
 
 # Install dependencies
@@ -214,7 +214,7 @@ If you have any questions or need help, please:
 
 1. Check the [documentation](dev.md)
 2. Look at the [demo application](apps/demo/)
-3. Open an [issue](https://github.com/yourusername/react-share-float/issues)
+3. Open an [issue](https://github.com/movever/react-share-float/issues)
 
 ---
 

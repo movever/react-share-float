@@ -36,7 +36,7 @@
     "component",
     "library"
   ],
-  "author": "Your Name",
+  "author": "movever",
   "license": "MIT",
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",

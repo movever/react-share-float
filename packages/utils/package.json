@@ -1,6 +1,6 @@
 {
   "name": "react-share-float-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility functions for React Share Float",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -18,7 +18,7 @@
     "utils",
     "utility"
   ],
-  "author": "Your Name",
+  "author": "movever",
   "license": "MIT",
   "devDependencies": {
     "vite": "^5.0.8"

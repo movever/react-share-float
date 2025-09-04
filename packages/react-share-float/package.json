@@ -1,6 +1,6 @@
 {
   "name": "react-share-float",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A floating share button component for React with multiple social media platforms",
   "type": "module",
   "main": "dist/index.js",
@@ -27,16 +27,16 @@
     "whatsapp",
     "telegram"
   ],
-  "author": "Your Name",
+  "author": "movever",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/react-share-float.git"
+    "url": "https://github.com/movever/react-share-float"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/react-share-float/issues"
+    "url": "https://github.com/movever/react-share-float/issues"
   },
-  "homepage": "https://github.com/yourusername/react-share-float#readme",
+  "homepage": "https://github.com/movever/react-share-float#readme",
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
