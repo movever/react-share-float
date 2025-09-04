@@ -27,7 +27,9 @@ That's it! The floating share button will appear on the left side of your screen
 
 ## Live Demo
 
-See it in action: [https://puzzlepave.com/](https://puzzlepave.com/)
+See it in action: 
+- [https://puzzlepave.com/](https://puzzlepave.com/)
+- [https://dk-js.com/](https://dk-js.com/)
 
 ## Dependencies
 
