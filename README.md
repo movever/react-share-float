@@ -12,6 +12,15 @@ A modern, responsive floating share button component for React that supports mul
 - ♿ **Accessible** - Full keyboard navigation and screen reader support
 - 📦 **Lightweight** - Minimal bundle size with tree-shaking support
 
+## Technology Stack
+
+- **React 18** - Frontend framework
+- **react-share** - Social sharing functionality
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling framework
+- **Lucide React** - Icon library
+- **JavaScript** - Development language (no TypeScript)
+
 ## Installation
 
 ```bash

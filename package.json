@@ -24,6 +24,7 @@
     "publish:main": "cd packages/react-share-float && npm publish",
     "publish:quick": "node scripts/quick-publish.js",
     "pre-publish": "node scripts/pre-publish-check.js",
+    "verify:package": "node scripts/verify-package.js",
     "test:build": "node scripts/test-build.js",
     "lint": "echo 'Linting not configured yet'",
     "test": "echo 'Testing not configured yet'"

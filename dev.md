@@ -31,6 +31,7 @@ react-share-float/
 - **Vite**: 构建工具
 - **Tailwind CSS**: 样式框架
 - **Lucide React**: 图标库
+- **JavaScript**: 开发语言（无TypeScript）
 
 ## 开发环境设置
 
