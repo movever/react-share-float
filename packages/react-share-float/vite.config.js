@@ -14,13 +14,17 @@ export default defineConfig({
       fileName: (format) => `index.${format === 'es' ? 'es.js' : 'js'}`
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react-share', 'lucide-react'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime', 'react-share', 'lucide-react', 'clsx', 'tailwind-merge'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'jsxRuntime',
+          'react/jsx-dev-runtime': 'jsxRuntime',
           'react-share': 'ReactShare',
-          'lucide-react': 'LucideReact'
+          'lucide-react': 'LucideReact',
+          'clsx': 'clsx',
+          'tailwind-merge': 'tailwindMerge'
         }
       }
     }
