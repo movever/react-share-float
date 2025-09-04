@@ -1,6 +1,10 @@
-# React Share Float
+# React Share Float Button
 
 A floating share button component for React with responsive design.
+
+## Live Demo
+
+See it in action: [https://puzzlepave.com/](https://puzzlepave.com/)
 
 ## Installation
 
@@ -24,3 +28,11 @@ function App() {
 ```
 
 That's it! The floating share button will appear on the left side of your screen.
+
+## Dependencies
+
+This component depends on [react-share](https://www.npmjs.com/package/react-share) for social media sharing functionality.
+
+## License
+
+MIT License - see the [LICENSE](LICENSE) file for details.

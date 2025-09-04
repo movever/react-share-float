@@ -2,6 +2,10 @@
 
 A floating share button component for React with responsive design.
 
+## Live Demo
+
+See it in action: [https://puzzlepave.com/](https://puzzlepave.com/)
+
 ## Installation
 
 ```bash
@@ -27,7 +31,7 @@ That's it! The floating share button will appear on the left side of your screen
 
 ## Dependencies
 
-This component depends on [react-share](https://github.com/nygardk/react-share) for social media sharing functionality.
+This component depends on [react-share](https://www.npmjs.com/package/react-share) for social media sharing functionality.
 
 ## License
 
