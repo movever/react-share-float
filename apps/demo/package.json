@@ -14,7 +14,7 @@
     "react-dom": "^18.2.0",
     "react-share": "^4.4.1",
     "lucide-react": "^0.294.0",
-    "react-share-float": "file:../../packages/react-share-float"
+    "react-share-float-button": "file:../../packages/react-share-float"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",

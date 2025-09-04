@@ -15,6 +15,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Integrated cn utility function directly into main package
 - Updated build scripts to remove utils package references
 
+## [1.0.5] - 2024-09-04
+
+### Changed
+- Renamed package from `react-share-float` to `react-share-float-button`
+- Updated all documentation and examples to use new package name
+
 ## [1.0.3] - 2024-09-04
 
 ### Removed

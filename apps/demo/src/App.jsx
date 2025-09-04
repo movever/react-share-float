@@ -1,5 +1,5 @@
 import React from 'react';
-import FloatingShareButton from '../../../packages/react-share-float/src/index.jsx';
+import FloatingShareButton from 'react-share-float-button';
 import './App.css';
 
 function App() {
@@ -76,7 +76,7 @@ function App() {
               </h2>
               <div className="bg-gray-50 rounded-lg p-4">
                 <pre className="text-sm text-gray-800 overflow-x-auto">
-{`import FloatingShareButton from 'react-share-float';
+{`import FloatingShareButton from 'react-share-float-button';
 
 function App() {
   return (

@@ -5,13 +5,13 @@ A floating share button component for React with responsive design.
 ## Installation
 
 ```bash
-npm install react-share-float
+npm install react-share-float-button
 ```
 
 ## Usage
 
 ```jsx
-import FloatingShareButton from 'react-share-float';
+import FloatingShareButton from 'react-share-float-button';
 
 function App() {
   return (
