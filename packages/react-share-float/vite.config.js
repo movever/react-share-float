@@ -16,6 +16,7 @@ export default defineConfig({
       formats: ['es', 'cjs'],
       fileName: (format) => `index.${format === 'es' ? 'es.js' : 'js'}`
     },
+    cssCodeSplit: false,
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime', 'react/jsx-dev-runtime', 'react-share', 'lucide-react', 'clsx', 'tailwind-merge'],
       output: {
