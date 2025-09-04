@@ -15,10 +15,7 @@ react-share-float/
 │   │   │   └── index.js     # 主入口文件
 │   │   ├── package.json
 │   │   └── vite.config.js
-│   └── utils/               # 工具函数库
-│       ├── src/
-│       │   └── index.js
-│       └── package.json
+
 ├── package.json             # 根目录配置
 ├── jsconfig.json           # JS路径映射
 └── dev.md                  # 开发文档
@@ -65,9 +62,8 @@ npm run dev
 # 构建所有包
 npm run build
 
-# 构建特定包
+# 构建主包
 npm run build:react-share-float
-npm run build:utils
 
 # 测试构建输出
 npm run test:build
@@ -109,7 +105,7 @@ npm run test:build
 ### 开发注意事项
 
 1. **路径映射**: 
-   - 使用 `@utils/*` 映射到 `packages/utils/src/*`
+   - 使用相对路径导入
 2. **样式**: 使用 Tailwind CSS 类名
 3. **图标**: 使用 Lucide React 图标
 4. **调试**: 使用单行 console.log 输出
@@ -149,8 +145,7 @@ npm run dev
 
 每个包都有自己的 `vite.config.js` 配置：
 
-- **react-share-float**: 构建为 UMD/ESM 格式
-- **utils**: 构建为 CommonJS/ESM 格式
+- **react-share-float**: 构建为 CommonJS/ESM 格式
 
 ### 2. 构建流程
 
@@ -175,9 +170,7 @@ npm login
 cd packages/react-share-float
 npm publish
 
-# 发布工具包
-cd ../utils
-npm publish
+
 ```
 
 ### 4. 版本管理
@@ -201,8 +194,7 @@ npm version major  # 0.1.0 -> 1.0.0
 # 发布所有包
 npm run publish:all
 
-# 发布特定包
-npm run publish:utils
+# 发布主包
 npm run publish:main
 ```
 
@@ -215,11 +207,10 @@ npm run publish:main
 ```json
 {
   "compilerOptions": {
-    "paths": {
-      "@utils/*": ["packages/utils/src/*"]
-    }
+    "baseUrl": "."
   }
 }
+```
 ```
 
 ### 2. 依赖问题

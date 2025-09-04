@@ -1,6 +1,6 @@
 {
   "name": "react-share-float",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A floating share button component for React with multiple social media platforms",
   "type": "module",
   "main": "dist/index.js",
@@ -46,7 +46,7 @@
     "lucide-react": "^0.294.0",
     "clsx": "^2.0.0",
     "tailwind-merge": "^2.0.0",
-    "react-share-float-utils": "1.0.0"
+
   },
   "devDependencies": {
     "vite": "^5.0.8",

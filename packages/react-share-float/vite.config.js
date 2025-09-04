@@ -24,9 +24,5 @@ export default defineConfig({
       }
     }
   },
-  resolve: {
-    alias: {
-      '@utils': '../../packages/utils/src/index.js'
-    }
-  }
+
 });

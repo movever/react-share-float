@@ -77,7 +77,6 @@ npm publish
 ```bash
 # 查看包信息
 npm view react-share-float
-npm view react-share-float-utils
 
 # 查看版本历史
 npm view react-share-float versions
@@ -156,8 +155,7 @@ npm login
 
 #### 7.2 手动发布命令
 ```bash
-# 发布特定包
-npm run publish:utils
+# 发布主包
 npm run publish:main
 
 # 发布所有包

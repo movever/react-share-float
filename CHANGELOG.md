@@ -7,23 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-- New features coming in next release
+### Removed
+- Removed utils package dependency
+- Simplified package structure
 
 ### Changed
-- Changes in existing functionality
+- Integrated cn utility function directly into main package
+- Updated build scripts to remove utils package references
 
-### Deprecated
-- Soon-to-be removed features
+## [1.0.3] - 2024-09-04
 
 ### Removed
-- Removed features
+- Removed react-share-float-utils package
+- Simplified package structure and dependencies
 
-### Fixed
-- Bug fixes
-
-### Security
-- Vulnerability fixes
+### Changed
+- Integrated utility functions directly into main package
+- Updated all build and publish scripts
+- Simplified installation process
 
 ## [1.0.2] - 2024-09-03
 

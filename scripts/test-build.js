@@ -46,12 +46,7 @@ function checkPackageJson(packagePath, packageName) {
 function main() {
   log('🧪 Testing build outputs...', 'blue');
   
-  // 检查utils包
-  log('\n📁 Checking utils package...', 'blue');
-  const utilsDistPath = './packages/utils/dist';
-  const utilsExists = checkFileExists(path.join(utilsDistPath, 'index.js'), 'Utils CJS build');
-  const utilsEsExists = checkFileExists(path.join(utilsDistPath, 'index.es'), 'Utils ESM build');
-  checkPackageJson('./packages/utils', 'react-share-float-utils');
+
   
   // 检查react-share-float包
   log('\n📁 Checking react-share-float package...', 'blue');
@@ -72,7 +67,7 @@ function main() {
   
   // 总结
   log('\n📊 Build Test Summary:', 'blue');
-  if (utilsExists && utilsEsExists && mainExists && mainEsExists && demoExists) {
+  if (mainExists && mainEsExists && demoExists) {
     log('🎉 All build outputs are present and ready for publishing!', 'green');
   } else {
     log('⚠️  Some build outputs are missing. Please run "npm run build" first.', 'yellow');

@@ -71,16 +71,12 @@ function checkPackage(packagePath, packageName) {
 function main() {
   log('🔍 Package Verification', 'blue');
   
-  const utilsCheck = checkPackage('./packages/utils', 'react-share-float-utils');
   const mainCheck = checkPackage('./packages/react-share-float', 'react-share-float');
   
   // 总结
   log('\n📊 Verification Summary:', 'blue');
   
   const issues = [];
-  if (utilsCheck.hasTypes) issues.push('utils package has types field');
-  if (utilsCheck.isPrivate) issues.push('utils package is private');
-  if (utilsCheck.hasTsFiles) issues.push('utils package has TypeScript files');
   if (mainCheck.hasTypes) issues.push('main package has types field');
   if (mainCheck.isPrivate) issues.push('main package is private');
   if (mainCheck.hasTsFiles) issues.push('main package has TypeScript files');

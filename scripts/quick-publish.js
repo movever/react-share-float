@@ -65,9 +65,8 @@ function main() {
   log('✅ Packages published successfully!', 'green');
   
   log('\n🎉 All done! Your packages are now available on NPM.', 'green');
-  log('\n📦 Package URLs:', 'blue');
+  log('\n📦 Package URL:', 'blue');
   log('   https://www.npmjs.com/package/react-share-float', 'yellow');
-  log('   https://www.npmjs.com/package/react-share-float-utils', 'yellow');
 }
 
 if (require.main === module) {

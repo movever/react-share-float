@@ -48,17 +48,11 @@ function main() {
     allChecksPassed = false;
   }
   
-  if (!exec('npm view react-share-float-utils')) {
-    log('✅ react-share-float-utils available', 'green');
-  } else {
-    log('❌ react-share-float-utils already exists', 'red');
-    allChecksPassed = false;
-  }
+
   
   // 3. 检查构建状态
   log('\n3. Checking build status...', 'blue');
-  if (fs.existsSync('packages/react-share-float/dist/index.js') && 
-      fs.existsSync('packages/utils/dist/index.js')) {
+  if (fs.existsSync('packages/react-share-float/dist/index.js')) {
     log('✅ Build files exist', 'green');
   } else {
     log('❌ Build files missing', 'red');
