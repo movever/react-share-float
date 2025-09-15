@@ -108,3 +108,39 @@ git push origin v<new-version>
 - 组件包已适配 Next.js App Router 与 SSR，构建时会自动注入 "use client" 并将 CSS 内联进 JS，无需使用者手动引入 CSS。
 - 外部依赖：`react`, `react-dom`, `react-share`, `lucide-react`；内部使用 `clsx`、`tailwind-merge`。
 - 开发调试建议：优先在 `apps/demo` 进行联调，确认样式和交互后再发布。
+
+## 一般迭代步骤（推荐流程）
+
+本地验证与发布的常规节奏：
+
+1) 本地构建并在 demo 中查看效果
+
+```bash
+# 在仓库根目录执行
+npm run build       # 构建核心包
+npm run dev         # 启动 demo，浏览器中查看效果（默认 5173）
+```
+
+2) 如效果正确，发布新版本（或直接跳过到第 3 步，在使用方项目中用本地 link 调试）
+
+```bash
+# 按需选择 patch/minor/major 并发布
+cd packages/react-share-float
+npm version patch --no-git-tag-version
+npm publish
+```
+
+3) 在使用该库的项目中升级并测试
+
+```bash
+# 在使用方项目中
+npm install react-share-float-button@<new-version>
+
+# 或者使用最新版本
+npm install react-share-float-button@latest
+
+# 运行本地项目，验证功能与样式
+npm run dev
+```
+
+提示：若需更快联调，也可在本仓库执行 `npm run dev`，使用方项目中通过本地文件或 `npm link` 的方式引入，但建议以发布版本为准做最终验证。
