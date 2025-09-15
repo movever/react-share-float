@@ -58,6 +58,9 @@ export default function FloatingShareButton() {
     const [canNativeShare, setCanNativeShare] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [showDialog, setShowDialog] = useState(false);
+    const [shareTitle, setShareTitle] = useState('PuzzlePave - Master the Art of Spatial Logic');
+    const [shareDescription, setShareDescription] = useState('PuzzlePave is an addictive logic puzzle game that challenges your spatial reasoning and problem-solving skills. Perfect for polyomino puzzles and packing puzzles enthusiasts.');
+    const [mediaUrl, setMediaUrl] = useState('');
 
     // 检测移动端
     useEffect(() => {
@@ -83,9 +86,55 @@ export default function FloatingShareButton() {
     // 分享配置
     const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://puzzlepave.com';
     const origin = typeof window !== 'undefined' ? window.location.origin : 'https://puzzlepave.com';
-    const mediaUrl = `${origin}/puzzlepave-screenshot1.jpg`;
-    const shareTitle = 'PuzzlePave - Master the Art of Spatial Logic';
-    const shareDescription = 'PuzzlePave is an addictive logic puzzle game that challenges your spatial reasoning and problem-solving skills. Perfect for polyomino puzzles and packing puzzles enthusiasts.';
+
+    // 动态解析页面的标题、描述、图片
+    useEffect(() => {
+        if (typeof document === 'undefined') return;
+
+        const getMeta = (selectors) => {
+            for (const sel of selectors) {
+                const el = document.querySelector(sel);
+                if (el && (el.content || el.getAttribute('content'))) {
+                    return el.content || el.getAttribute('content');
+                }
+            }
+            return '';
+        };
+
+        const pickFirstNonEmpty = (...values) => values.find(v => v && String(v).trim().length > 0) || '';
+
+        const resolvedTitle = pickFirstNonEmpty(
+            getMeta(['meta[property="og:title"]', 'meta[name="twitter:title"]']),
+            document.title
+        );
+
+        const resolvedDesc = pickFirstNonEmpty(
+            getMeta(['meta[property="og:description"]', 'meta[name="description"]', 'meta[name="twitter:description"]'])
+        );
+
+        const rawImg = pickFirstNonEmpty(
+            getMeta(['meta[property="og:image"]', 'meta[name="twitter:image"]'])
+        );
+
+        let resolvedImg = rawImg;
+        try {
+            if (!resolvedImg) {
+                const firstImg = document.querySelector('img');
+                if (firstImg && firstImg.src) resolvedImg = firstImg.src;
+            }
+            if (resolvedImg) {
+                // 规范化为绝对地址
+                resolvedImg = new URL(resolvedImg, window.location.href).href;
+            }
+        } catch (_) {
+            // 忽略 URL 解析异常
+        }
+
+        // 设置 state（保留原有默认兜底）
+        if (resolvedTitle) setShareTitle(resolvedTitle);
+        if (resolvedDesc) setShareDescription(resolvedDesc);
+        setMediaUrl(resolvedImg || `${origin}/puzzlepave-screenshot1.jpg`);
+    }, [origin]);
 
     // 移动端使用原生分享API
     const handleNativeShare = async () => {
