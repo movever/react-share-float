@@ -164,14 +164,13 @@ export default function FloatingShareButton() {
                 {/* 展开的分享按钮 - 使用绝对定位与变换，默认在屏幕外，点击滑入 */}
                 <div
                     className={cn(
-                        "left-12 top-0 bg-white border border-gray-200 p-2 transition-all duration-300 transform",
+                        "left-12 top-0 bg-white border border-gray-200 p-2 transition-all duration-300 transform z-50",
                         isExpanded ? "rounded-tr border-b-0" : "rounded-r"
                     )}
                     style={{
                         transform: `translateX(${isExpanded ? '0' : '-120%'})`,
                         opacity: isExpanded ? 1 : 0,
                         pointerEvents: isExpanded ? 'auto' : 'none',
-                        zIndex: 51,
                     }}
                 >
                     <div className="flex flex-col gap-2">
