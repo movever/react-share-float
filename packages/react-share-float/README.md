@@ -35,6 +35,10 @@ See it in action:
 
 This component depends on [react-share](https://www.npmjs.com/package/react-share) for social media sharing functionality.
 
+## 其它文档
+
+- [dev.md](../../dev.md)
+
 ## License
 
 MIT License - see the [LICENSE](LICENSE) file for details.
