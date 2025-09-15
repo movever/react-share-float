@@ -64,6 +64,45 @@ npm run publish:quick
 npm version patch | minor | major
 ```
 
+## 如何发布新版本（详细步骤）
+
+以发布核心包 `react-share-float-button` 为例：
+
+```bash
+# 0) 确认登录 npm（需具备发布权限）
+npm whoami || npm login
+
+# 1) 拉取最新代码并确认在 main 分支
+git pull origin main
+
+# 2) 确认工作区干净（可选）
+git status
+
+# 3) 在包目录内提升版本号（按需选择 patch/minor/major）
+cd packages/react-share-float
+npm version patch --no-git-tag-version
+
+# 4) 构建产物（会自动内联 CSS 并注入 "use client"）
+npm run build
+
+# 5) 发布到 npm（默认 latest tag）
+npm publish
+
+# 6) 提交并推送版本号变更
+git add package.json
+git commit -m "chore: release <new-version>"
+git push origin main
+
+# 7)（可选）创建 git tag
+git tag v<new-version>
+git push origin v<new-version>
+```
+
+注意：
+- 如启用了 npm 二次验证，发布时需根据提示完成 OTP。
+- 如果只是快速连续修复，可重复 3-6 步（注意合理的版本号）。
+- 若需一次性处理所有包，可使用根脚本 `npm run publish:all` 或 `npm run publish:quick`。
+
 ## 备注
 
 - 组件包已适配 Next.js App Router 与 SSR，构建时会自动注入 "use client" 并将 CSS 内联进 JS，无需使用者手动引入 CSS。
