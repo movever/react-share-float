@@ -103,14 +103,11 @@ export default function FloatingShareButton() {
 
         const pickFirstNonEmpty = (...values) => values.find(v => v && String(v).trim().length > 0) || '';
 
-        const resolvedTitle = pickFirstNonEmpty(
-            getMeta(['meta[property="og:title"]', 'meta[name="twitter:title"]']),
-            document.title
-        );
+        // 只用页面 title
+        const resolvedTitle = document.title || '';
 
-        const resolvedDesc = pickFirstNonEmpty(
-            getMeta(['meta[property="og:description"]', 'meta[name="description"]', 'meta[name="twitter:description"]'])
-        );
+        // 只用 meta[name="description"]
+        const resolvedDesc = getMeta(['meta[name="description"]']);
 
         const rawImg = pickFirstNonEmpty(
             getMeta(['meta[property="og:image"]', 'meta[name="twitter:image"]'])
