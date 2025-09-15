@@ -58,8 +58,8 @@ export default function FloatingShareButton() {
     const [canNativeShare, setCanNativeShare] = useState(false);
     const [showMore, setShowMore] = useState(false);
     const [showDialog, setShowDialog] = useState(false);
-    const [shareTitle, setShareTitle] = useState('PuzzlePave - Master the Art of Spatial Logic');
-    const [shareDescription, setShareDescription] = useState('PuzzlePave is an addictive logic puzzle game that challenges your spatial reasoning and problem-solving skills. Perfect for polyomino puzzles and packing puzzles enthusiasts.');
+    const [shareTitle, setShareTitle] = useState('');
+    const [shareDescription, setShareDescription] = useState('');
     const [mediaUrl, setMediaUrl] = useState('');
 
     // 检测移动端
@@ -84,8 +84,8 @@ export default function FloatingShareButton() {
     }, []);
 
     // 分享配置
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : 'https://puzzlepave.com';
-    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://puzzlepave.com';
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+    const origin = typeof window !== 'undefined' ? window.location.origin : '';
 
     // 动态解析页面的标题、描述、图片
     useEffect(() => {
@@ -133,7 +133,7 @@ export default function FloatingShareButton() {
         // 设置 state（保留原有默认兜底）
         if (resolvedTitle) setShareTitle(resolvedTitle);
         if (resolvedDesc) setShareDescription(resolvedDesc);
-        setMediaUrl(resolvedImg || `${origin}/puzzlepave-screenshot1.jpg`);
+        setMediaUrl(resolvedImg || '');
     }, [origin]);
 
     // 移动端使用原生分享API
